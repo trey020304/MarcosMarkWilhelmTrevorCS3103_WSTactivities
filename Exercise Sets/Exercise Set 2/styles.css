@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d7fee0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    height: 275px;
+}
+
+
+h3 {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #0000EE;
+}
+
+.grayscale {
+    filter: grayscale(100%) brightness(0%);
+}

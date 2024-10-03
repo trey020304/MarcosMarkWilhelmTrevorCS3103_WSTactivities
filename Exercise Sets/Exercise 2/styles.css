@@ -33,6 +33,6 @@ a {
     color: #02e42b;
 }
 
-.grayscale {
-    filter: grayscale(100%) brightness(0%);
+.black {
+    filter: brightness(0%);
 }

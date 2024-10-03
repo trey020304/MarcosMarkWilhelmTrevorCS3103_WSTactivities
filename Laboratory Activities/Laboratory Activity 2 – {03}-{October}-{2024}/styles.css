@@ -1,0 +1,243 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    background: radial-gradient(circle, #a9f393, #f8f0f8);
+}
+  
+/*<weight>: Use a value from 400 to 700*/
+
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.silkscreen-bold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+
+.pixelify-sans{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+.vision-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.board-title {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 33px;
+    color: #157740;
+}
+
+.daily-reminder {
+    width: 500px;
+    justify-content: center;
+    background: #d2f3c8;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.daily-reminder h2 {
+    font-size: 30px;
+    margin-top: 2vh;
+    margin-bottom: 0px;
+}
+
+.daily-reminder p {
+    font-size: 16px;
+    color: #009830;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+/* Styles for the image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+/* Styles for the image container */
+.image-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Smooth animation for transformation */
+}
+/* Styles for the images */
+.image-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth animation for image scaling */
+}
+/* Green overlay */
+.image-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(144, 238, 144, 0.18); /* Light green overlay with 30% opacity */
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out; /* Smooth animation for overlay color change */
+}
+/* Hover effect for image container */
+.image-item:hover {
+    transform: translateY(-5px); /* Move the container up slightly */
+}
+/* Remove overlay color on hover */
+.image-item:hover::after {
+    background: rgba(144, 238, 144, 0); /*remove overlay*/
+}
+/* Text overlay container */
+.image-item .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0; /* Hide the text initially */
+    pointer-events: none; /* Prevent interaction with the overlay */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for text appearance */
+}
+/* Show overlay text on hover */
+.image-item:hover .overlay-text {
+    opacity: 1; /* Make the text visible */
+}
+
+.row-contents {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.goals {
+    margin: 0px 0px 30px 0px;
+    padding: 20px;
+    background: #d2f3c8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+}
+
+
+.goals h3 {
+    margin: 10px;
+    font-size: 40px;
+    color: #009830;
+}
+
+.goals ul {
+    list-style-type: disc;
+    padding: 15px;
+    margin: 15px;
+}
+
+.goals li {
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goals li:hover {
+    transform: translateY(-5px); /* Moves the item up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #e5f4e0;
+}
+
+
+.heizou-content {
+    position: relative; /* Position relative to allow absolute positioning inside */
+    display: inline-block; /* Maintain the size based on the content */
+    height: 463px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.heizou-content img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transform effect on hover */
+}
+
+.heizou-content:hover img {
+    transform: scale(1.05); /* Slightly zoom the image */
+}
+
+
+.heizou-content::after {
+    content: ""; /* Required for ::after to render */
+    position: absolute; /* Absolute positioning relative to .heizou-content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.heizou-content:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.hover-text {
+    position: absolute; /* Position relative to .heizou-content */
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Ensure the text is exactly centered */
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10; /* Ensure text is above the overlay */
+    opacity: 0; /* Hide text initially */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.heizou-content:hover .hover-text {
+    opacity: 1; /* Show text on hover */
+}

@@ -1,0 +1,70 @@
+
+.newsreader {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}.newsreader-heading {
+    font-weight: 700; /*bold weight for headings*/
+}
+.newsreader-body {
+    font-weight: 400; /*standard weight*/
+}
+.newsreader-light {
+    font-weight: 300; /*light weight for subtle elements*/
+}
+
+* {
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box; /*consistent element sizing*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*full height of the viewport*/
+    background: url('https://media4.giphy.com/media/pTUz4FYlAN8VpJXdvD/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; /*text visible over the background*/
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /*lessen wideness of content*/
+    background-color: rgba(0, 0, 0, 0.6); /*semi-transparent background to content*/
+    padding: 20px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+div {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #2f2e2e;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #cbcbcb;
+    margin-bottom: 20px;
+    font-size: 50px;
+}

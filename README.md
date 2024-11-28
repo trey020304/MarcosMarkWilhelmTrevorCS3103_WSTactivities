@@ -19,3 +19,5 @@ EXERCISE SETS:
 LABORATORY ACTIVITIES:
 1. Lab Activity 1 (Class Schedule)
 2. Lab Activity 2 (Vision Board)
+3. Lab Activity 3 (Words and Sentences Counter)
+4. Lab Activity 4 (Flourished Exercise 2)

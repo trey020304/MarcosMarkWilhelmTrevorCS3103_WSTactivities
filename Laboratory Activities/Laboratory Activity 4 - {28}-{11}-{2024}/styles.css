@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'GenshinFont';
+    src: url('zh-cn.ttf') format('truetype');
+}
+
+body {
+    font-family: 'GenshinFont', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://upload-os-bbs.hoyolab.com/upload/2023/12/19/17138284/ca113da14f6be21d346d99f680643a0c_8129845109117756901.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-image: url('containergenshin.png');
+    background-size: contain; /*whole image fits*/
+    background-position: center;
+    background-repeat: no-repeat; /*prevent tile*/
+    width: 75%;
+    height: 75vh;
+    padding: 20px;
+}
+
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    height: 275px;
+    overflow: hidden; /*content doesn't spill out*/
+}
+
+h3 {
+    font-family: 'GenshinFont';
+    margin-bottom: 15px;
+    color: #555555;
+}
+
+a {
+    font-family: 'GenshinFont';
+    font-size: 12px;
+    text-decoration: none;
+    color: #BCA895;
+    display: inline-block; /*link behaves like a block element for transform effects*/
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-1px);
+    color: teal;
+}
+
+p {
+    font-family: 'GenshinFont';
+    font-size: 12px;
+    text-decoration: none;
+    color: #555555;
+    margin: 0; /* Removes extra space between paragraphs */
+    line-height: 1.2; /* Reduces spacing between lines */
+}
+
+.audio-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.audio-button img {
+    margin-right: 8px;
+}
+
+.audio-button:hover {
+    transform: translateY(-1px);
+}
+
+.audio-button .button-text {
+    font-family: 'GenshinFont';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%); /*center text horizontally */
+    opacity: 0; /*initially hide the text*/
+    font-size: 14px;
+    background-color: #fff;
+    padding: 8px 12px; /*around the text*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    pointer-events: none; /*text doesn’t block button interactions */
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.audio-button .button-text::after {
+    content: ''; /*tail of bubble*/
+    position: absolute;
+    top: 100%; /*place tail below text*/
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #fff; /*triangle tail*/
+}
+
+.audio-button:hover .button-text {
+    opacity: 1;
+    top: -80px;
+}
+
